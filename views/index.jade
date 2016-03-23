@@ -1,0 +1,15 @@
+extends layout
+
+block content
+    h1= title
+    form(name="translate", method="post")
+        div.row
+            div.col-md-4 
+                span Pepino Lang (plain English)
+                textarea(name="pepinoLang").form-control
+                    | #{pepinoLang}
+            div.col-md-4
+                span CucumberJs
+                pre= cucumberJs
+        div.row
+            input(type="submit", value="Translate")
