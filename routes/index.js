@@ -17,7 +17,7 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/', function(req, res, next) {
-    var cucumberJs = pepino.converter(req.body.pepinoLang); 
+    var cucumberJs = pepino.convert(req.body.pepinoLang); 
     console.log(cucumberJs);
     res.render('index', { title: 'Pepino Demo', pepinoLang: sample, cucumberJs: cucumberJs });
 });
